@@ -72,6 +72,9 @@ class Graph:
                     nextVert.set_distance(newCost)
                     pq.decreaseKey(nextVert, newCost)
 
+
+
+
 if __name__ == '__main__':
     # Pruebas. No funcionan debido a la integracion con la interfaz :)
     '''

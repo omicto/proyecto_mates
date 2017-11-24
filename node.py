@@ -39,11 +39,18 @@ class Node:
     def set_pred(self, p):
         self.pred = p
 
+    def set_pos(self, pos):
+        # Pos es una tupla (x,y)
+        self.pos = pos
+
     def get_distance(self):
         return self.dist
 
     def get_pred(self):
         return self.pred
+
+    def get_pos(self):
+        return self.pos
 
 
 
