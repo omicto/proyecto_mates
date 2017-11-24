@@ -18,10 +18,10 @@ class Graph:
         # Regresamos un iterable con todos los nodos del grafo
         return iter(self.vert_dict.values())
 
-    def add_vertex(self, key, oval):
+    def add_vertex(self, key):
         # Actualizamos el numero de vertices
         self.num_vertices += 1
-        new_vertex = Node(key, oval)
+        new_vertex = Node(key)
         # Añadimos el nuevo vertice al diccionario
         self.vert_dict[key] = new_vertex
         return new_vertex
@@ -53,6 +53,17 @@ class Graph:
     def get_vertices(self):
         # Lista con todas las id de los vertices
         return self.vert_dict.keys()
+
+    def get_node_with_pos(self, x, y):
+        '''
+        Regresa el vertice con V.x,y = x,y
+        '''
+        for v in self:
+            x0, y0 = v.get_pos()
+            if x0 == x and y0 == y:
+                return v
+        else:
+            return None
 
     def prim(self, start):
         # Ejecutamos el algoritmo in-place

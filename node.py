@@ -1,12 +1,12 @@
 from tkinter import *
 class Node:
-    def __init__(self, key, oval):
+    def __init__(self, key):
         '''
         Iniciamos con una id para el vertice.
         Oval es el circulo que representa al vertice
         '''
         self.id = key
-        self.oval = oval
+        # self.oval = oval
         self.pred = None
         # Diccionario de vertices adyacentes
         self.adjacent = {}
@@ -39,9 +39,10 @@ class Node:
     def set_pred(self, p):
         self.pred = p
 
-    def set_pos(self, pos):
-        # Pos es una tupla (x,y)
-        self.pos = pos
+    def set_pos(self, x, y):
+        # Coordenadas
+        self.x = x
+        self.y = y
 
     def get_distance(self):
         return self.dist
@@ -50,7 +51,4 @@ class Node:
         return self.pred
 
     def get_pos(self):
-        return self.pos
-
-
-
+        return (self.x, self.y)
