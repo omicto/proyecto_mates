@@ -1,5 +1,5 @@
-# proyecto_mates
-Determine the Minimum Spanning Tree of a graph using Prim's algorithm. Made for a boring class.
+# MST of a graph using Prim's algorithm.
+Determine the Minimum Spanning Tree of a graph using Prim's algorithm. Made for an Introductory Discrete Math class.
 
 ## Usage
 1. Double click to add nodes
